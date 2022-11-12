@@ -1,3 +1,4 @@
+// getting elements
 const listContainer = document.getElementById('list-container');
 const todoContainer = document.getElementById('todo-container');
 const form = document.querySelector('#add-container');
@@ -38,6 +39,7 @@ function getTasks() {
 
   // create Elements
 
+//   For each method on the task
   task.forEach((tasks) => {
     const completedTask = document.createElement('div');
     completedTask.setAttribute('class', 'list-item');
@@ -185,6 +187,7 @@ function StoreTaskInLocalStorage(tasks, description) {
 }
 
 function removeTask(e) {
+//   The event object
   if (e.target.classList.contains('remove')) {
     if (confirm('Are you sure, you want to delete this task?')) {
       e.target.parentElement.parentElement.remove();
